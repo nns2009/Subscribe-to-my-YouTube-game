@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+		html, body {
+			height: 100vh;
+			padding: 0;
+			margin: 0;
+
+			background-color: white;
+			font-family: "Roboto", "Noto", Arial, sans-serif;
+			color: rgb(3, 3, 3);
+		}
+
+		.centerer {
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.card {
+			display: flex;
+			flex-direction: column;
+			/* width: 28em; */
+			gap: 0.7em;
+			/* background-color: antiquewhite; */
+		}
+
+		.horizontal {
+			display: flex;
+			gap: 0.9em;
+		}
+
+		.logo {
+			width: 2em;
+			border-radius: 0.3em;
+			font-size: 3.4em;
+		}
+
+		.channel-info {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+
+		.channel-name {
+			font-size: 2.3em;
+			font-weight: bold;
+		}
+
+		.subscriber-info {
+			font-size: 1.7em;
+			color: rgb(82, 82, 82);
+		}
+
+		.subscribe-button {
+			width: 100%;
+			padding: 0.7em;
+			font-size: 2.3em;
+			border: none;
+			border-radius: 5px;
+			
+			text-align: center;
+			text-decoration: none;
+			font-weight: bold;
+			font-family: "Roboto", "Noto", Arial, sans-serif;
+			letter-spacing: 0.1em;
+			text-transform: uppercase;
+			cursor: pointer;
+			color: white;
+			
+			background-color: rgb(204, 0, 0);
+		}
+		.subscribe-button:hover {
+			background-color: rgb(221, 19, 19);
+		}
+		.subscribe-button:active {
+			background-color: rgb(180, 0, 0);
+		}
+	</style>
+	<title>Subscribe to my YouTube channel</title>
+</head>
+<body>
+	<script>
+		function subscribe() {
+			$count.textContent = parseInt($count.textContent) + 1;
+		}
+	</script>
+	<div class="centerer">
+		<div class="card">
+			<div class="horizontal">
+				<img src="./logo.jpg" class="logo" />
+				<div class="channel-info">
+					<div class="channel-name">Awesome GameDev</div>
+					<div class="subscriber-info">
+						<span id="$count">0</span> subscribers
+					</div>
+				</div>
+			</div>
+			<a class="subscribe-button" onclick="subscribe()"
+				target="_blank"
+				href="https://www.youtube.com/channel/UCZacxOhkmPS2cklzU1_Ya9Q">
+				Subscribe
+			</a>
+		</div>
+	</div>
+</body>
+</html>
